@@ -1,6 +1,7 @@
 package tests;
 
 import com.github.javafaker.Faker;
+import io.qameta.allure.Feature;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -15,6 +16,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class FillFormOriginalTest extends TestBase {
 
     @Test
+    @Feature("Original version")
     @DisplayName("Fill form negative test")
     void confirmationIsDispplayedTest() {
         Faker faker = new Faker();

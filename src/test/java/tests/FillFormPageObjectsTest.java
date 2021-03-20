@@ -1,6 +1,7 @@
 package tests;
 
 import com.github.javafaker.Faker;
+import io.qameta.allure.Feature;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -31,6 +32,7 @@ public class FillFormPageObjectsTest extends TestBase {
             picture = "file.png";
 
     @Test
+    @Feature("PageObject version")
     @Tag("positive")
     public void fillFormPageTest() {
         formPage.openForm();

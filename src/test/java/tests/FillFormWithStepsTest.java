@@ -1,6 +1,8 @@
 package tests;
 
 import com.github.javafaker.Faker;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -15,6 +17,8 @@ public class FillFormWithStepsTest extends TestBase {
 
     @Test
     @Tag("positive")
+    @Feature("Steps version")
+    @Story("Example for story")
     @DisplayName("Fill form positive test")
     void confirmationIsDispplayedTest() {
         Faker faker = new Faker();
