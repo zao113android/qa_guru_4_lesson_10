@@ -21,13 +21,15 @@ allure {
 dependencies {
     testImplementation "io.qameta.allure:allure-java-commons:2.13.8"
     testImplementation "io.qameta.allure:allure-selenide:2.13.8"
+    testImplementation "io.qameta.allure:allure-ee-junit-platform:3.28.2"
+
     testImplementation "org.hamcrest:hamcrest-all:1.3"
     testImplementation "com.github.javafaker:javafaker:1.0.2"
     testImplementation "com.codeborne:selenide:5.18.0"
     testImplementation "org.junit.jupiter:junit-jupiter-api:5.7.1"
     testImplementation "org.junit.jupiter:junit-jupiter-params:5.7.1"
     testImplementation "org.aspectj:aspectjweaver:1.9.6"
-    testImplementation "io.qameta.allure:allure-ee-junit-platform:3.28.2"
+
 
     implementation "org.aeonbits.owner:owner:1.0.12"
 
@@ -41,6 +43,7 @@ tasks.withType(JavaCompile) {
 test {
     useJUnitPlatform()
     systemProperties(System.getProperties())
+    System.setProperty("junit.jupiter.extensions.autodetection.enabled", "true")
 }
 
 tasks.withType(Test) {
